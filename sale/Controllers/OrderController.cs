@@ -30,7 +30,9 @@ namespace sale.Controllers
         /// <returns></returns>
         public ActionResult InsertOrder()
         {
-            return View();
+            Models.Order order = new Models.Order();
+            order.CustId = "瑞陽資訊";
+            return View(order);
         }
 
         /// <summary>
@@ -41,9 +43,9 @@ namespace sale.Controllers
         [HttpPost()]
         public ActionResult InsertOrder(Models.Order order)
         {
-            Models.OrderService orderService = new Models.OrderService();
-            orderService.InsertOrder(order);
-            return View("Index");
+            //Models.OrderService orderService = new Models.OrderService();
+            //orderService.InsertOrder(order);
+            return View();
         }
 
         [HttpGet()]

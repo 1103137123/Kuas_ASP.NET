@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -10,11 +12,15 @@ namespace sale.Models
         /// <summary>
         /// 訂單編號
         /// </summary>
+        [DisplayName("訂單編號")]
+        [Required()]
         public int OrderId { get; set; }
 
         /// <summary>
         /// 客戶代號
         /// </summary>
+        [MaxLength(3)]
+        [DisplayName("客戶代號")]
         public string CustId { get; set; }
 
         /// <summary>
