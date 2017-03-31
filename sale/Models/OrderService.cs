@@ -49,7 +49,10 @@ namespace sale.Models
         /// <returns></returns>
         public List<Models.Order> GetOrders()
         {
-            return new List<Order>();
+            List<Models.Order> result = new List<Order>();
+            result.Add(new Order() { CustId = "GSS", CustName = "瑞陽資訊", EmpId = 1, EmpName = "王曉明" ,Orderdate= DateTime.Parse("2015/11/08")});
+            //result.Add(new Order() { CustId = "GSS??", CustName = "瑞陽資訊??", EmpId = 2, EmpName = "明", Orderdate = DateTime.Parse("2015/1/1") });
+            return result;
         }
     }
 }
